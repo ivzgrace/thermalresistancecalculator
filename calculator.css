@@ -1,0 +1,86 @@
+  .calculator_divs table td {
+    padding: .3em .5em;
+  }
+  .calculator_divs table td:first-child {
+    width: 180px;
+    text-align:right;
+  }
+  .calculator_divs table td:nth-child(2) {
+    width: 200px;
+  }
+  .calculator_divs table td:nth-child(3) {
+    width: 83px;
+  }
+  .calculator_divs input, .calculator_divs #singleBtn {
+    width: 197px;
+  }
+  .calculator_divs select.thickunit{
+    width:65px;
+  }
+  .calculator_divs select{
+      background-color: #fff;
+  }
+  .et-db #et-boc .et-l .calculator_divs .et_pb_button.selctbtn {
+    background: #8dbae3;
+  }
+  .et-db #et-boc .et-l .calculator_divs .et_pb_button.selctbtn:hover {
+    padding: .4em 2em .4em .7em;
+  }
+  .et-db #et-boc .et-l .calculator_divs .gray-butt::after, .calculator_divs .gray-butt::after {
+    font-size: 12px !important;
+    margin-left: .1em;
+    bottom: 4px;
+  }
+  .calculator_divs table tr input#result{
+      background-color: #f2f2f2;
+  }
+  .calculator_divs select.selopt {
+    padding: .375rem 1.2rem .375rem 0.75rem;
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position:
+      calc(100% - 12px) calc(0.8em + 1px),
+      calc(100% - 7px) calc(0.8em + 1px);
+    background-size:
+      5px 5px,
+      5px 5px;
+    background-repeat: no-repeat;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+  }
+
+  @media only screen and (max-width: 559px){
+    .calculator_divs .gray-butt {
+      width: 74px;
+      font-size: 0 !important;
+      height: 35px;
+    }
+    .et-db #et-boc .et-l .calculator_divs .gray-butt::after, .calculator_divs .gray-butt::after {
+      bottom: 17px;
+    }
+    .calculator_divs select.selopt{
+      padding-bottom: 0.68rem;
+    }
+    .calculator_divs.trtc td:nth-of-type(3) {
+      display: block;
+    }
+    .calculator_divs .tctotr:([style*="display:table-row"]), .calculator_divs .trtotc([style*="display:table-row"]){
+      display:flex !important;
+      align-content: flex-start;
+      font-size:90%;
+    }
+    .calculator_divs .form-control{
+      width:105px !important;
+    }
+    .calculator_divs tr:not(:first-of-type) td:first-child{
+      width:82px !important;
+      text-align:left;
+    }
+    .calculator_divs tr:not(:first-of-type) td:nth-child(2){
+      width:120px !important;
+    }
+    .calculator_divs tr:not(:first-of-type) td:nth-child(3){
+      width:120px !important;
+    }
+  }
