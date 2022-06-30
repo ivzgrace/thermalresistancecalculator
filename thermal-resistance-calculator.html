@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>Thermal Conductivity and Thermal Resistance Calculator
+<script src="tctotr.js"></script>
+<link rel="stylesheet" href="calculator.css" type="text/css" media="all">
+</head>
+<body>
+<div class="calculator_divs trtc">
+  <table style="width: 100%;">
+      <tr>
+          <td></td>
+          <td colspan="3">
+              <select name="TRTCSelect" id="TRTCSelect" class="selopt">
+                  <option value="0">Thermal Conductivity to Thermal Resistance</option>
+                  <option value="1">Thermal Resistance to Thermal Conductivity</option>
+              </select>
+          </td>
+      </tr>
+      <tr class="tctotr">
+          <td><em>k</em> = Thermal Conductivity</td>
+          <td><input type="text" id="tcinput" class="form-control" name="tcinput"></td>
+          <td>W/m•K</td>
+          <td><button data-icon="" class="et_pb_button gray-butt selctbtn" id="mselDB">Select from database</button></td>
+      </tr>
+      <tr class="trtotc">
+          <td><em>R</em> = Thermal Resistance</td>
+          <td><input type="text" id="trinput" class="form-control" name="trinput"></td>
+          <td colspan="2">
+            <select id="trunit" class="trunit selopt">
+              <option value="mm2KW">m²K/W</option>
+              <option value="hfft2FBtu">hr•ft²•F/Btu</option>
+            </select>
+          </td>
+      </tr>
+      <tr>
+          <td>Sample Thickness</td>
+          <td><input type="text" id="thickinput" class="form-control" name="thickinput"></td>
+          <td>
+              <select id="thickunit" class="thickunit selopt">
+                  <option value="mm">mm</option>
+                  <option value="cm">cm</option>
+                  <option value="in">in</option>
+              </select>
+          </td>
+          <td></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>
+              <div id="calculator-container">
+                  <button id="singleBtn" class="et_pb_button" data-icon="" onClick="Calculate(TRTCSelect.value, thickinput.value, thickunit.value);">Calculate</button>
+              </div>
+          </td>
+          <td colspan="2"></td>
+      </tr>
+      <tr id="Results" class="unhidden">
+        <td id="method"><em>R</em> = Thermal Resistance</td>
+        <td><input type="text" disabled="disabled" id="result" name="result"></td>
+        <td id="unitresult">m<sup>2</sup>K/W</td>
+        <td></td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>
